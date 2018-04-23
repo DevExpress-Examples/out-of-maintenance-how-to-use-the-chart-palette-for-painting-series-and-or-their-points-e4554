@@ -1,0 +1,52 @@
+﻿<Window x:Class="UsePalettes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+        Title="MainWindow" Height="350" Width="525" >
+    <Grid>
+        <dxc:ChartControl>
+            <!--Define a palette for your chart.-->
+            <dxc:ChartControl.Palette>
+                <dxc:PastelKitPalette />
+            </dxc:ChartControl.Palette>
+            <!-- / -->
+            <dxc:ChartControl.Diagram>
+                <dxc:XYDiagram2D>
+                    <dxc:XYDiagram2D.Series>
+                        <!--Since the ColorEach property is enabled for the first series,
+                        the ChartControl.Palette propery affects its points.-->
+                        <dxc:BarSideBySideSeries2D DisplayName="Series 1" ColorEach="True">
+                            <dxc:BarSideBySideSeries2D.Points>
+                                <dxc:SeriesPoint Argument="A" Value="20" />
+                                <dxc:SeriesPoint Argument="B" Value="8" />
+                                <dxc:SeriesPoint Argument="C" Value="9" />
+                                <dxc:SeriesPoint Argument="D" Value="16" />
+                            </dxc:BarSideBySideSeries2D.Points>
+                            <dxc:BarSideBySideSeries2D.LegendPointOptions>
+                                <dxc:PointOptions PointView="ArgumentAndValues"/>
+                            </dxc:BarSideBySideSeries2D.LegendPointOptions>
+                        </dxc:BarSideBySideSeries2D>
+                        <!--The second series' color is defined by the ChartControl.Palette property.-->
+                        <dxc:LineSeries2D DisplayName="Series 2" MarkerVisible="True">
+                            <dxc:LineSeries2D.Points>
+                                <dxc:SeriesPoint Argument="A" Value="2" />
+                                <dxc:SeriesPoint Argument="B" Value="3" />
+                                <dxc:SeriesPoint Argument="C" Value="6" />
+                                <dxc:SeriesPoint Argument="D" Value="13" />
+                            </dxc:LineSeries2D.Points>
+                        </dxc:LineSeries2D>
+                    </dxc:XYDiagram2D.Series>
+                </dxc:XYDiagram2D>
+            </dxc:ChartControl.Diagram>
+            <!--The legend lists the points of the first series 
+            (based on its ColorEach and LegendPointOptions settings), 
+            and the name of the second series.-->
+            <dxc:ChartControl.Legend>
+                <dxc:Legend />
+            </dxc:ChartControl.Legend>
+            <dxc:ChartControl.Titles>
+                <dxc:Title Content="How to Use the Chart Palettes" />
+            </dxc:ChartControl.Titles>
+        </dxc:ChartControl>
+    </Grid>
+</Window>

@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/UsePalettes/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/UsePalettes/MainWindow.xaml))
+<!-- default file list end -->
 # How to use the chart palette for painting series and/or their points
 
 

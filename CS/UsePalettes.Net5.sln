@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsePalettes", "UsePalettes\UsePalettes.csproj", "{DA6BDCA6-CC78-43A9-A276-58126AD5042D}"
+# Visual Studio 16
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsePalettes", "UsePalettes\UsePalettes.Net5.csproj", "{DA6BDCA6-CC78-43A9-A276-58126AD5042D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
